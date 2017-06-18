@@ -1,1 +1,19 @@
 /* table.wxss */
+page{
+    background-color: #FFFFFF;
+}
+.page__title{
+	text-align: center;
+}
+.weui-grid__label{
+	text-align: left;
+	padding-left: 10px;
+	color: #3c763d;
+	font-weight: bold;
+}
+.title{
+	font-size: 20px;
+}
+.weui-grid{
+	background-color: #dff0d8;
+}

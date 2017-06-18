@@ -2,7 +2,6 @@
 var wxCharts = require('../../utils/wxcharts.js');
 var summary = require('../../utils/data.js');
 var summaryData = summary.getSummaryData().summaryDetail;
-/*console.log(summaryData.length);*/
 var app = getApp();
 var lineChart = null;
 var ringChart = null;
