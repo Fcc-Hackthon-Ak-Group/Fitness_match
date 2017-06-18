@@ -3,13 +3,9 @@ body {
     background-color: #f5f5f5;
     color: #000;
 }
-.chart{
-    height: 400px;
+.container{
+	margin-top: 50px;
 }
-#recommend{
+h1{
 	text-align: center;
-}
-#nowHeartRate{
-	font-size: 40px;
-	font-weight: bold;
 }
