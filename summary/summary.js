@@ -13,31 +13,34 @@ $(document).ready(function () {
         cardio:0,
         high:0
     };
-
     $.getJSON("data.json",function (result) {
-        $("span.averangeHeart").text(result.averangeHeart);
-        $("span.maxHeart").text(result.maxHeart);
-        $("span.calorie").text(result.summaryCalorie);
-        $("span.sportTime").text(result.summaryTime);
-        $("p.suggesting").text(result.summarySuggest);
+         $("span.averangeHeart").text(result[0].avg_rate_int);
+         $("span.maxHeart").text(result[0].max_rate_int);
+         $("span.calorie").text(result[0].cal_use_int);
+         $("span.sportTime").text(result[0].time_spent_time);
+         $("p.suggesting").text(result[0].advice_text);
 
-        xData = result.summaryDetail.map(function (e) {
+    });
+
+    $.getJSON("data-detail.json",function (result) {
+
+        xData = result.map(function (e) {
             return e.time;
         });
-        heartData = result.summaryDetail.map(function (e) {
-            if(e.rate<80){
+        heartData = result.map(function (e) {
+            if(e.rate_int<80){
                 heartZone.low++
             }
-            else if(e.rate>=80&&e.rate<120){
+            else if(e.rate_int>=80&&e.rate_int<120){
                 heartZone.warm++
             }
-            else if(e.rate>=120&&e.rate<160){
+            else if(e.rate_int>=120&&e.rate_int<160){
                 heartZone.cardio++
             }
-            else if(e.rate>=160){
+            else if(e.rate_int>=160){
                 heartZone.high++
             }
-            return e.rate;
+            return e.rate_int;
         });
         var rateChart = echarts.init(document.getElementById('lineChart'));
         rateOption = {
