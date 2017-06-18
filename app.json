@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/table/table",
+    "pages/summary/summary",
+    "pages/realTime/realTime"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/table/table",
+        "text": "课表"
+      },
+      {
+        "pagePath": "pages/realTime/realTime",
+        "text": "实时"
+      },
+      {
+        "pagePath": "pages/summary/summary",
+        "text": "总结"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "debug": true
+}

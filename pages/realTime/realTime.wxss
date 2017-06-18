@@ -1,0 +1,10 @@
+/* realTime.wxss */
+
+/*.section__title{
+    float:left
+}*/
+
+.section{
+  margin:5%;
+  width:90%;
+}

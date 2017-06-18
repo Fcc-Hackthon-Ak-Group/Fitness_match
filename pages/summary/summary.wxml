@@ -1,0 +1,15 @@
+<!--summary.wxml-->
+<!-- <view class="container">
+    <canvas canvas-id="heartRateCanvas" disable-scroll="true" class="canvas mt20" bindtouchstart="touchHandler"></canvas>
+</view> -->
+<view class="section">
+  	<view class="flex-wrp" style="height: 300px;flex-direction:column;">
+    	<view class="flex-item ">
+    		<canvas canvas-id="heartRateCanvas" disable-scroll="true" class="canvas mt20" bindtouchstart="touchHandler"></canvas>
+    	</view>
+    	<view class="flex-item ">icon</view>
+    	<view class="flex-item ">
+    		<canvas canvas-id="ringCanvas" class="canvas" bindtouchstart="touchHandler"></canvas>
+    	</view>
+  	</view>
+</view>

@@ -1,0 +1,12 @@
+/* summary.wxss */
+/* .section{
+	border: 1px solid red;
+} */
+.mt20{
+	margin-top: 0rpx;
+	/* border: 1px solid #000; */
+}
+.canvas{
+	width: 100%;
+	height: 300px;
+}

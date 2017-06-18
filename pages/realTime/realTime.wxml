@@ -1,0 +1,11 @@
+<view class="container">
+    <view class="section">
+      <view class="section__title">运动实时建议:</view>
+      <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler">
+      </canvas>
+    </view>
+    <view class="section">
+      <view class="section__title">运动实时建议:</view>
+      <text>{{suggestMsg}}</text>
+    </view>
+</view>
