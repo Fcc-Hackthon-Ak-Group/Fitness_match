@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>fitness realtime</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen" /> -->
+    <link rel="stylesheet" href="realtime.css">
+</head>
+<body>
+    <main id="app">
+        <!-- 实时心率轨迹图 -->
+        <div id="realtimeheartRate"  class="chart"></div>
+        <!-- 实时建议 -->
+        <div id="recommend">
+            <p><strong>运动实时建议</strong></p>
+            <p id="recommendText">很棒哦！</p>
+        </div>
+    </main>
+</body>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="realtime.js"></script>
+<script src="realtimedata.js"></script>
