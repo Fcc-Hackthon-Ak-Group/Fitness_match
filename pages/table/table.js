@@ -1,11 +1,15 @@
 // table.js
+var allData = require('../../utils/data.js');
+var classScheduleData = allData.getClassData().classScheduleDetail;
+console.log(classScheduleData);
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+      grids: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+      class: classScheduleData
   },
 
   /**

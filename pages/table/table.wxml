@@ -1,2 +1,17 @@
 <!--table.wxml-->
-<text>table.wxml</text>
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">运动健身课表</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-grids">
+            <block wx:for="{{grids}}" wx:key="*this">
+                <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+                    <view class="weui-grid__label title">{{class[index].name}}</view>
+                    <view class="weui-grid__label">{{class[index].date}}</view>
+                    <view class="weui-grid__label">{{class[index].time}}</view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</view>
