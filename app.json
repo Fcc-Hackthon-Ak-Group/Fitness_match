@@ -6,20 +6,31 @@
     "pages/realTime/realTime"
   ],
   "tabBar": {
+    "position":"bottom",
+    "backgroundColor": "#FEFEFE",
+    "color": "#000000",
     "list": [
       {
+        "iconPath": "utils/ico/home.png",
+        "selectedIconPath": "utils/ico/home.png",
         "pagePath": "pages/index/index",
         "text": "首页"
       },
       {
+        "iconPath": "utils/ico/form.png",
+        "selectedIconPath": "utils/ico/form.png",
         "pagePath": "pages/table/table",
         "text": "课表"
       },
       {
+        "iconPath": "utils/ico/time.png",
+        "selectedIconPath": "utils/ico/time.png",
         "pagePath": "pages/realTime/realTime",
         "text": "实时"
       },
       {
+        "iconPath": "utils/ico/message.png",
+        "selectedIconPath": "utils/ico/message.png",
         "pagePath": "pages/summary/summary",
         "text": "总结"
       }

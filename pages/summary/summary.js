@@ -51,15 +51,14 @@ Page({
                 disableGrid: true
             },
             yAxis: {
-                title: '运动心率',
                 format: function (val) {
                     return val+ 'bpm';
                 },
-                min: 60,
+                min: 40,
                 max: 200,
                 gridColor:["#FF0000","#CC6600","#009966","#FF0000"]
             },
-            width: windowWidth,
+            width: 300,
             height: 200,
             dataLabel: true,
             dataPointShape: true,
@@ -100,7 +99,7 @@ Page({
                 stroke: false
             }],
             disablePieStroke: true,
-            width: windowWidth,
+            width: 300,
             height: 200,
             dataLabel: false,
             legend: false,
