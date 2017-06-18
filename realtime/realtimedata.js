@@ -44,6 +44,7 @@ $(document).ready(function () {
             type: 'spline',
             animation: Highcharts.svg, // don't animate in old IE
             marginRight: 10,
+            backgroundColor:'rgba(0,0,0,0)',
             events: {
                 load: function () {
                     // set up the updating of the chart each second
