@@ -1,5 +1,8 @@
 //summary.js
 var wxCharts = require('../../utils/wxcharts.js');
+var summary = require('../../utils/data.js');
+var summaryData = summary.getSummaryData().summaryDetail;
+/*console.log(summaryData.length);*/
 var app = getApp();
 var lineChart = null;
 var ringChart = null;
@@ -11,34 +14,16 @@ Page({
         lineChart.showToolTip(e, {
              background: '#7cb5ec'
         });
-    }, /*
-    createSimulationData: function () {
-        var categories = [];
-        var data = [];
-        for (var i = 0; i < 10; i++) {
-            categories.push('2016-' + (i + 1));
-            data.push(Math.random()*(20-10)+10);
-        }
-        // data[4] = null;
-        return {
-            categories: categories,
-            data: data
-        }
     },
-    updateData: function () {
-        var simulationData = this.createSimulationData();
-        var series = [{
-            name: '成交量1',
-            data: simulationData.data,
-            format: function (val, name) {
-                return val.toFixed(2) + '万';
-            }
-        }];
-        lineChart.updateData({
-            categories: simulationData.categories,
-            series: series
-        });
-    },*/
+    getformatData: function(summaryData){
+        var rateArr = [];
+        var timeArr = [];
+        for(var i=0;i<summaryData.length;i++){
+            timeArr.push(summaryData[i].time);
+            rateArr.push(summaryData[i].rate);
+        }
+        return [rateArr,timeArr]
+    },
     onShow: function (e) {
         var windowWidth = 320;
         try {
@@ -47,24 +32,17 @@ Page({
         } catch (e) {
             console.error('getSystemInfoSync failed!');
         }
-        
-        /*var simulationData = this.createSimulationData();*/
+        var showData = this.getformatData(summaryData);
+        /*console.log(showData[0],showData[1]);*/
         lineChart = new wxCharts({
             canvasId: 'heartRateCanvas',
             type: 'line',
-            categories: ['12:40','12:42','12:44','12:46','12:48','12:50','12:52','12:54','12:56','12:58','13:00'],
-            /*categories: simulationData.categories,*/
+            categories: showData[1],
             animation: true,
             background: '#f5f5f5',
-            series: [/*{
-                name: '成交量1',
-                data: simulationData.data,
-                format: function (val, name) {
-                    return val.toFixed(2) + '万';
-                }
-            },*/ {
+            series: [{
                 name: '运动心率轨迹',
-                data: [80, 110, 140, 160, 155, 140, 150, 162, 171, 179, 120],
+                data: showData[0],
                 format: function (val) {
                     return val;
                 }
@@ -103,23 +81,22 @@ Page({
                 fontSize: 15,
                 offsetX: 0
             },
-            subtitle: {
-                name: '收益率',
-                color: '#666666',
-                fontSize: 15
-            },
             series: [{
-                name: '成交量1',
+                name: '偏高',
                 data: 30,
                 stroke: false,
                 color:"#009966"
             }, {
-                name: '成交量2',
+                name: '最佳',
                 data: 55,
                  stroke: false
             }, {
-                name: '成交量3',
+                name: '偏低',
                 data: 20,
+                stroke: false
+            }, {
+                name: '过低',
+                data: 10,
                 stroke: false
             }],
             disablePieStroke: true,

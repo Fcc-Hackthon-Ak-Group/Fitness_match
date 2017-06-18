@@ -22,7 +22,7 @@ Page({
       data.shift()
     }
     categories.push(Math.floor(Math.random() * (12 - 1) + 1));
-    data.push(Math.random() * (120 - 30) + 30);
+    data.push(Math.random() * (200 - 40) + 40);
     return {
       categories: categories,
       data: data
@@ -92,8 +92,8 @@ Page({
         format: function (val) {
           return val.toFixed(2);
         },
-        min: 30,
-        max: 120
+        min: 40,
+        max: 200
       },
       width: windowWidth,
       height: 150,
@@ -106,6 +106,6 @@ Page({
   },
 
   onShow: function (e) {
-    setInterval(this.updateData, 500)
+    setInterval(this.updateData, 1000)
   }
 });
