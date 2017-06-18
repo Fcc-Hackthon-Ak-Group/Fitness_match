@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>fitness summary</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen" />
+        <link rel="stylesheet" href="summary.css">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script   src="https://code.jquery.com/jquery-3.2.1.js"   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="   crossorigin="anonymous"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!--<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>-->
+        <script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+        <script src="summary.js"></script>
+    </head>
+    <body>
+
+        <div id="app" class="container">
+            <div class="jumbotron" style="margin-bottom: 0">
+            <!-- 心率轨迹图 -->
+            <section id="heartRate" class="row">
+                <div id="lineChart"  class="chart col-xs-12 col-md-12" style="height:400px;">
+                </div>
+            </section>
+            <!-- 运动详情 -->
+            <section id="sportDetail" class="row">
+                <!-- 运动数据分析 -->
+                <div id="dataAnalysis" class="col-xs-5 col-md-5 col-md-offset-1 col-xs-offset-1">
+                    <h4 class="col-xs-offset-4 col-md-offset-4"><strong>数据分析</strong></h4>
+                    <ul class="list-group col-xs-11 col-md-11">
+                        <li class="list-group-item list-group-item-success">
+                            <span  class="glyphicon glyphicon-time"></span> 运动时间(min)
+                            <span class="sportTime"></span>
+                        </li>
+                        <li class="list-group-item list-group-item-info">
+                            <span  class="glyphicon glyphicon-fire"></span> 卡路里消耗(calorie)
+                            <span class="calorie"></span>
+                        </li>
+                        <li class="list-group-item list-group-item-warning">
+                            <span  class="glyphicon glyphicon-stats"></span> 平均心率(bpm)
+                            <span class="averangeHeart"></span>
+                        </li>
+                        <li class="list-group-item list-group-item-danger">
+                            <span  class="glyphicon glyphicon-heart"></span> 最大心跳(bpm)
+                            <span class="maxHeart"></span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 饼图 -->
+                <div id="piechart" class="chart col-xs-5 col-md-5" style="height: 300px;">
+                </div>
+            </section>
+            <!-- 建议 -->
+            <section id="recommend" class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <h4><strong>运动建议</strong></h4>
+                        <p class="suggesting"></p>
+                    </div>
+            </section>
+        </div>
+        </div>
+    </body>
+</html>
+
